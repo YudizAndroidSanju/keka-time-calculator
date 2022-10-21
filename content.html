@@ -1,7 +1,45 @@
 <!DOCTYPE html>
-<html style=''>
-<body style="width:400px;">
-<div id='message'>Calculating time....</div>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./script.js" defer></script>
+    <style>
+        body {
+            height: 70px;
+            width: 120px;
+            max-height: 70px;
+            max-width: 120px;
+            display: grid;
+            place-items: center;
+        }
+        .loader {
+            border: 10px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 10px solid #3498db;
+            width: 32px;
+            height: 32px;
+            -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id='message' class="loader">
+    </div>
 </body>
-<script src="script.js"></script>
+
 </html>

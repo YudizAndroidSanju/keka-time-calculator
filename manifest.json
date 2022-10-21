@@ -1,25 +1,23 @@
 {
-  "manifest_version": 3,
-  "name": "Keka",
-  "description": "Keka time calculator",
-  "author": "John Smith :)",
-  "version": "1.0",
-  "icons": {
-    "16": "images/logo_16.png",
-    "48": "images/logo_48.png",
-    "128": "images/logo_128.png"
-  },
-  "permissions": [
-    "activeTab",
-    "scripting",
-    "storage"
-  ],
-  "action":{
-    "default_popup": "content.html",
-    "default_title": "Time checker"
-  },
-  "background": {
-    "service_worker": "background.js",
-    "type": "module"
-  }
+    "manifest_version": 3,
+    "name": "Keka",
+    "description": "Keka time calculator",
+    "author": "John Smith :)",
+    "version": "1.0",
+    "icons": {
+        "16": "images/logo_16.png",
+        "48": "images/logo_48.png",
+        "128": "images/logo_128.png"
+    },
+    "permissions": ["activeTab", "scripting", "storage"],
+    "action": {
+        "default_popup": "content.html",
+        "default_title": "Time checker"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://*.keka.com/*"],
+            "js": ["content_script.js"]
+        }
+    ]
 }
